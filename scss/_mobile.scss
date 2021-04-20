@@ -1,0 +1,40 @@
+@media (min-width: 992px) {
+        .nav-container {
+            position: fixed;
+            left: 48px;
+            top: 0;
+            padding: 0;
+            width: 0;
+            max-width: 0;
+        }
+
+        #main {
+            margin-top: 124px;
+        }
+
+
+}
+
+// Hide custom cursor on mobile/tablet devices
+@media (min-width: 768px) {
+    body {
+        cursor: none !important;
+    }
+
+    * {
+        cursor: none;
+    }
+    
+    #cursor {
+        display: block !important;
+    }
+
+ }
+// Show custom cursoer on desktop devices
+ @media (max-width: 767px) {
+
+    #cursor {
+        display: none !important;
+    }
+    
+ }

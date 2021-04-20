@@ -1,0 +1,297 @@
+
+@import 'config';
+
+body {
+    margin: 0;
+    //background-color:#fff;
+    
+    
+    background: rgb(255,255,255);
+    color: $primary-color;
+    font-family: $font-stack;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 5%;
+    line-height: 32px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    height: 100vh;
+    
+}
+
+
+
+#cursor {
+    //position: absolute;
+    z-index: 11000;
+    right: 0;
+    top: 0;
+    -webkit-filter: blur($bluramount);
+    -moz-filter: blur($bluramount);
+    -o-filter: blur($bluramount);
+    -ms-filter: blur($bluramount);
+    filter: blur($bluramount);
+
+    width: $cursor-size;
+    height: $cursor-size;
+    background-color: $primary-color;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    position: fixed;
+
+    transition: .2s -webkit-filter linear;
+    transition: linear height 0.25s, linear width 0.25s;
+    -webkit-transition: linear height 0.25s, linear width 0.25s;
+    -moz-transition: linear height 0.25s, linear width 0.25s;
+    -o-transition: linear height 0.25s, linear width 0.25s;
+
+    transition: filter 0.25s;
+   -webkit-transition: filter 0.25s;
+    -moz-transition: filter 0.25s;
+    -o-transition: filter 0.25s;
+  }
+
+.hoveredCursor {
+
+  width: 30px !important;
+  height: 30px !important;
+
+  -webkit-filter: blur(10px) !important;
+  -moz-filter: blur(10px) !important;
+  -o-filter: blur(10px) !important;
+  -ms-filter: blur(10px) !important;
+  filter: blur(10px) !important;
+}
+    
+*::selection {
+    background: #DCF9E4; /* WebKit/Blink Browsers */
+    //background-color: #EEE;
+    //color: $tertiary-color;
+  }
+*::-moz-selection {
+    background: #DCF9E4;/* Gecko Browsers */
+    //color: $tertiary-color;
+  }
+
+
+h2, .h2 {
+
+    font-weight: $font-weight;
+}
+
+hr {
+    border-bottom: 2px solid $primary-color;
+    opacity:1;
+}
+
+.display-1 {
+    line-height: 1.5;    
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+    border-bottom: none;
+    padding-bottom: 3px;
+    -webkit-transition: all .125s ease-out;
+    -moz-transition: all .125s ease-out;
+    -o-transition: all .125s ease-out;
+    transition: all .125s ease-out;
+    //cursor:none;
+  
+
+    &:visited, &:active  {
+        color: $primary-color;
+    }
+
+    &:hover {
+        color: $secondary-color;
+        
+    }
+
+
+}
+
+
+nav {
+
+    padding-left:0;
+    z-index: 1030;
+
+    .row {
+        --bs-gutter-x: 0;
+    }
+
+    .logo-container {
+        width: 124px;
+        height: 64px;
+
+        #logo {
+            width:120px;
+            min-width: 120px;
+        }
+    
+    }
+}
+
+#main {
+    a {
+        color: $primary-color;
+        text-decoration: none;
+        border-bottom: 2px solid $primary-color;
+
+        &:hover {
+            color: $secondary-color;
+            border-bottom: 2px solid $secondary-color;
+            border: none;
+            
+        }
+    }
+
+}
+
+
+/*@keyframes animatedBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: -500px 0; }
+}
+@-moz-keyframes animatedBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: -500px 0; }
+}
+@-webkit-keyframes animatedBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: -500px 0; }
+}
+@-ms-keyframes animatedBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: -500px 0; }
+}
+@-o-keyframes animatedBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: -500px 0; }
+}*/
+
+/*@keyframes animatedBackground {
+    100% { background-position: 0 0; }
+    50% { background-position: -500px 0; }
+    0% { background-position: -900px 0; }
+  }*/
+
+
+  /*@keyframes animatedBackground {
+    0% { background-position: 0 0; }
+    50% { background-position: 0 -314x; }
+    100% { background-position: 0 -628px; }
+  }*/
+
+  @keyframes animatedBackground {
+    0% { background-position: 0 0; }
+    50% { background-position: 0 -274x; }
+    100% { background-position: 0 -548px; }
+  }
+  
+
+  #pattern {
+     /* height: 285px;
+      max-height: 285px;
+      min-height: 285px;
+      background-image: url(../img/tj_landscaping_blue_pattern.svg);
+      background-position: 0 0;
+      //background-repeat: repeat-x;
+      background-repeat: repeat;*/
+
+      
+      height: 285px;
+      max-height: 285px;
+      min-height: 285px;
+      background-image: url(../img/tj_landscaping_blue_pattern_ani_2px.svg);
+      background-position: 0 0;
+      background-repeat: repeat;
+      background-size: auto 548px;
+
+      //background-position: 0px 0px;
+    animation: animatedBackground 60s linear 1s infinite;
+    -moz-animation: animatedBackground 60s linear 1s infinite;
+    -webkit-animation: animatedBackground 60s linear 1s infinite;
+    -ms-animation: animatedBackground 60s linear 1s infinite;
+    -o-animation: animatedBackground 60s linear 1s infinite;
+
+
+    
+    //animation-timing-function: ease-in;
+//-webkit-animation-timing-function: ease-in;
+
+  }
+
+
+#services {
+    .service-list {
+        &-items {
+            list-style-type: none; /* Remove bullets */
+            padding: 0; /* Remove padding */
+            margin: 0; /* Remove margins */
+
+        }
+    }
+    h2 {
+        max-width: 820px;
+    }
+}
+
+
+
+#zigzag {
+    height: 20px;
+    max-height: 20px;
+    min-height: 20px;
+    background-image: url(../img/zigzag_hr_blue_2x.svg);
+    background-position: 0 0;
+    background-repeat: repeat-x;
+}
+
+footer {
+
+    #tj-title {
+        font-weight: 600 !important;
+    }
+
+}
+
+
+// Custom Padding and margin
+$p: 1.45;
+$multiple: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+@each $paddings in $multiple {
+    .pad-#{$paddings}{
+        padding-top: #{$p * $paddings}rem;
+        padding-bottom: #{$p * $paddings}rem;
+    }
+
+    .pad-b-#{$paddings}{
+        padding-bottom: #{$p * $paddings}rem;
+    }
+
+    .pad-t-#{$paddings}{
+        padding-top: #{$p * $paddings}rem;
+    }
+
+    .mar-#{$paddings}{
+        padding: #{$p * $paddings}rem;
+    }
+
+    .mar-b-#{$paddings}{
+        padding-bottom: #{$p * $paddings}rem;
+    }
+
+    .mar-t-#{$paddings}{
+        padding-top: #{$p * $paddings}rem;
+    }
+
+    
+}
+
+
+@import 'mobile';
